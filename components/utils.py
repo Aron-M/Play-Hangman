@@ -29,13 +29,12 @@ def initialize_game():
 
 
 
-def start_round():
-        for letter in word:
-            if letter in guessed_correct:
-                output += letter
+def guessed_correct():
+    if letter in word_progress:
+        output += letter
         
-        while guess in word:
-            print("That was great! Well done, you guessed the right letter!")
-            guessed_correct.append(guess)
-            user_choice = ''
+    while guess in word:
+        print(f"Well done {user_name}, you guessed a correct letter!" + '\U0001F44F' * 3)
+        guessed_correct.append(guess)
+        user_choice = ''
 

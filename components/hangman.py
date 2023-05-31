@@ -6,5 +6,5 @@ words = get_words()
 word = random.choice(words).lower().strip()
 guessed_correct = []
 guessed_incorrect = []
-tries = 7
+guesses = 7
 hangman_count = -1
