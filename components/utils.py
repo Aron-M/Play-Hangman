@@ -11,7 +11,9 @@ def get_words(filepath='words.txt'):
 def initialize_game():
     user = ''
     while user == '':
-        user = input("Hello and welcome! Do you fancy a game of hangman? Type 'yes'or 'start' to play. If not, type 'exit' or 'no' to quit").lower().strip()
+        user = input(("Hello and welcome! Do you fancy a game of hangman? "
+                      "Type 'yes' or 'start' to play. "
+                      "If not, type 'exit' or 'no' to quit")).lower().strip()
         if user == 'yes' or user == 'start':
             run_hangman_game()
             user = ''
@@ -21,3 +23,4 @@ def initialize_game():
         else:
             print('Please type y or yes to play, else type n or no to quit.')
             user = ''
+
