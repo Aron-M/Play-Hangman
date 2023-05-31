@@ -42,3 +42,14 @@ Hangman is a fun and interactive game where the user plays a word-guessing game 
 
 
 * If user guesses the correct word within the designated amount of tries, they will win the game and be congratulated.
+
+
+## Application Flow of logic and features
+
+### Start-Game Logic & Workflow
+
+![start-game-logic](images/workflow-charts/start-game-logic.png)
+
+### In-Game Logic & Workflow
+
+![in-game-logic](images/workflow-charts/in-game-logic.png)
