@@ -2,6 +2,7 @@ import random
 from hangman_ascii_art import print_hangman_art
 from utils import get_words
 
+user_name = ''
 words = get_words()
 word = random.choice(words).lower().strip()
 guessed_correct = []

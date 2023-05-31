@@ -13,9 +13,11 @@ def initialize_game():
     
     user_choice = ''
     while user_choice == '':
-        user_choice = input(f"Hello, {user_name}! Do you fancy a game of hangman? "
+        user_choice = input(f"Hello, {user_name}!"
+                            "Do you fancy a game of hangman? "
                             "Type 'yes' or 'start' to play. "
-                            "If not, type 'exit' or 'no' to quit: ").lower().strip()
+                            "If not, type 'exit'" 
+                            "or 'no' to quit: ").lower().strip()
         
         if user_choice in ['yes', 'start']:
             run_hangman_game(user_name)
@@ -24,7 +26,8 @@ def initialize_game():
             print('See you next time!')
             exit()
         else:
-            print('Please type "yes" or "start" to play, or "exit" or "no" to quit.')
+            print('Please type "yes" or "start" to play,'
+                  'or "exit" or "no" to quit.')
             user_choice = ''
 
 
@@ -34,7 +37,9 @@ def guessed_correct():
         output += letter
         
     while guess in word:
-        print(f"Well done {user_name}, you guessed a correct letter!" + '\U0001F44F' * 3)
+        print(f"Well done {user_name}, "
+              "you guessed a correct letter!" + '\U0001F44F' * 3)
         guessed_correct.append(guess)
+        print(word_progress)
         user_choice = ''
 
