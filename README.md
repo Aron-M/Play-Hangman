@@ -13,3 +13,11 @@ Hangman is a fun and interactive game where the user plays a word-guessing game 
 * As user I want to see my progress on a visual level.
 * As a user I want to be informed when my actions/decisions were right or wrong.
 * As user I want be able to play again or exit once the game is over.
+
+### Application Goals
+* Create a words based guessing challenge for the user.
+* Provide the user with an interface to input required actions for the game to be played.
+* Include visuals of the user's current status within the game as they play.
+* Inform the user when they have used all their chances, or if they have won the game.
+* Have the user be able to answer all questions in succession.
+* Let the user be able to revert back to the start if they choose play the game again.
