@@ -30,8 +30,6 @@ def initialize_game():
 
 
 def start_round():
-    while tries > 0:
-        output = ''
         for letter in word:
             if letter in guessed_correct:
                 output += letter
@@ -39,4 +37,5 @@ def start_round():
         while guess in word:
             print("That was great! Well done, you guessed the right letter!")
             guessed_correct.append(guess)
+            user_choice = ''
 
