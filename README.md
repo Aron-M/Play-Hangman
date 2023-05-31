@@ -21,3 +21,24 @@ Hangman is a fun and interactive game where the user plays a word-guessing game 
 * Inform the user when they have used all their chances, or if they have won the game.
 * Have the user be able to answer all questions in succession.
 * Let the user be able to revert back to the start if they choose play the game again.
+
+### How to Play/Use the App
+* User is greeted with a question whether they want to start the game by pressing y or yes.
+
+
+* Message prompts user to to guess the correct randomly generated word and displays a line depicting the length of word.
+
+
+* User is given 7 chances to guess the wrong letter. On the 8th wrong guess, user loses the game.
+
+
+* Upon guessing each correct letter, they will appear in their respective position in the word.
+
+
+* If user guesses the wrong letter, part of a picture will be displayed of a hanging man. 
+
+
+* Each wrong guess completes the picture further.  
+
+
+* If user guesses the correct word within the designated amount of tries, they will win the game and be congratulated.
