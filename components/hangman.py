@@ -1,5 +1,5 @@
 import random
-
+from hangman_ascii_art import print_hangman_art
 
 def get_words(filepath='words.txt'):
     result = []

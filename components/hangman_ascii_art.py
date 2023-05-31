@@ -1,6 +1,6 @@
 
 
-def hangman_art():
+def print_hangman_art():
     hangman_image = [
 """
 +---+
@@ -72,4 +72,7 @@ def hangman_art():
      ======
 """, 
 
+""""    
+
+""""
 ]
