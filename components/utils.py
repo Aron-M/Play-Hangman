@@ -1,4 +1,5 @@
-import random, string
+import random
+import string
 
 
 def display_game_rules():
@@ -11,6 +12,22 @@ def display_game_rules():
     print("4. You have 7 guesses to complete the word.")
     print()
     print("Good luck!")
+
+
+def display_game_title():
+    game_title = """
+
+  _____ _   _        _    _                                            _______ _                  _  
+ |_   _| | ( )      | |  | |                                          |__   __(_)                | | 
+   | | | |_|/ ___   | |__| | __ _ _ __   __ _ _ __ ___   __ _ _ __       | |   _ _ __ ___   ___  | | 
+   | | | __| / __|  |  __  |/ _` | '_ \ / _` | '_ ` _ \ / _` | '_ \      | |  | | '_ ` _ \ / _ \ | | 
+  _| |_| |_  \__ \  | |  | | (_| | | | | (_| | | | | | | (_| | | | |     | |  | | | | | | |  __/ |_| 
+ |_____|\__| |___/  |_|  |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|     |_|  |_|_| |_| |_|\___| (_) 
+                                         __/ |                                                       
+                                        |___/                                                        
+
+    """
+    print(game_title)
 
 
 def print_hangman_art(hangman_count):
@@ -98,7 +115,6 @@ def print_hangman_art(hangman_count):
     print(hangman_image[hangman_count])
 
 
-
 def get_words(filepath='/workspace/Play-Hangman/words.txt'):
     result = []
     with open(filepath) as n:
@@ -110,6 +126,7 @@ def get_words(filepath='/workspace/Play-Hangman/words.txt'):
 
 
 def initialize_game():
+    display_game_title()
     user_name = input("Hello and welcome! Please enter your name: ")
 
     if not user_name.strip():
@@ -117,7 +134,8 @@ def initialize_game():
         return
 
     if any(char in string.punctuation for char in user_name):
-        print("User name cannot contain punctuation marks. Please enter a valid name.")
+        print("User name cannot contain punctuation marks."
+              "Please enter a valid name.")
         return
 
     user_choice = ''
