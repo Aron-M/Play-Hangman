@@ -122,7 +122,7 @@ def print_hangman_art(hangman_count):
     print(hangman_image[hangman_count])
 
 
-def get_words(filepath='/workspace/Play-Hangman/words.txt'):
+def get_words(filepath='words.txt'):
     result = []
     with open(filepath) as n:
         lines = n.readlines()
