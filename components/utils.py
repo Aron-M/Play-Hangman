@@ -139,7 +139,12 @@ def run_hangman_game(user_name):
         guess = input("Enter a letter: ").lower().strip()
 
         if len(guess) != 1:
-            print("Please enter only one letter.")
+            print("Please enter only one letter."
+                  "Spaces and blank attempts not allowed")
+            continue
+
+        if not guess.isalpha():
+            print("Please enter only alphabetical characters.")
             continue
 
         if guess in guessed_correct or guess in guessed_incorrect:
