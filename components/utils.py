@@ -1,6 +1,17 @@
 import random
 
 
+def display_game_rules():
+    print("RULES OF THE GAME:")
+    print()
+    print("1. Guess the letters of the word displayed in blank spaces below.")
+    print("2. Only guess lower-case alphabetical letters.")
+    print("3. Numbers, spaces, punctuations, blank guesses are not allowed.")
+    print("4. You have 7 guesses to complete the word.")
+    print()
+    print("Good luck!")
+
+
 def print_hangman_art(hangman_count):
     hangman_image = [
         """
@@ -148,7 +159,7 @@ def run_hangman_game(user_name):
             continue
 
         if guess in guessed_correct or guess in guessed_incorrect:
-            print("You have already guessed that letter.")
+            print("You have already guessed that letter. Try another letter.")
             continue
 
         if guess in word:
@@ -163,7 +174,7 @@ def run_hangman_game(user_name):
             guessed_incorrect.append(guess)
             hangman_count += 1
             guesses -= 1
-            print("Wrong guess!")
+            print("Wrong guess! Let's go again.")
 
     if guesses == 0:
         print_hangman_art(hangman_count)
