@@ -1,4 +1,4 @@
-import random
+import random, string
 
 
 def display_game_rules():
@@ -114,6 +114,10 @@ def initialize_game():
 
     if not user_name.strip():
         print("User name cannot be blank. Please enter a valid name.")
+        return
+
+    if any(char in string.punctuation for char in user_name):
+        print("User name cannot contain punctuation marks. Please enter a valid name.")
         return
 
     user_choice = ''
