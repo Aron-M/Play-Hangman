@@ -120,6 +120,7 @@ def initialize_game():
                             "or 'no' to quit: ").lower().strip()
 
         if user_choice in ['yes', 'start']:
+            display_game_rules()
             run_hangman_game(user_name)
             user_choice = ''
         elif user_choice in ['exit', 'no']:
