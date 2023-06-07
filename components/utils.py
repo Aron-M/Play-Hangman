@@ -58,6 +58,9 @@ def run_hangman_game(user_name):
         print("You have already guessed that letter.")
         continue
 
+    if guess in word:
+        guessed_correct()
+
 
 def guessed_correct():
     if letter in word_progress:
