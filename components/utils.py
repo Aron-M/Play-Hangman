@@ -5,6 +5,15 @@ def print_hangman_art(hangman_count):
     hangman_image = [
         """
         +---+
+            |
+            |
+            |
+            |
+            |
+         ======
+        """,
+        """
+        +---+
           | |
           O |
             |
@@ -118,7 +127,7 @@ def run_hangman_game(user_name):
     guessed_correct = []
     guessed_incorrect = []
     guesses = 7
-    hangman_count = -1
+    hangman_count = 0
 
     while guesses > 0:
         print_hangman_art(hangman_count)
