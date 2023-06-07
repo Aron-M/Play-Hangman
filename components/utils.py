@@ -40,6 +40,15 @@ def run_hangman_game(user_name):
     guesses = 7
     hangman_count = -1
 
+    guess = input("Enter a letter: ").lower().strip()
+
+    if len(guess) != 1:
+        print("Please enter only one letter.")
+        continue
+
+    if guess in amount_correct or guess in amount_incorrect:
+        print("You have already guessed that letter.")
+        continue
 
 
 def guessed_correct():
