@@ -31,6 +31,16 @@ def initialize_game():
             user_choice = ''
 
 
+def run_hangman_game(user_name):
+    user_name = ''
+    words = get_words()
+    word = random.choice(words).lower().strip()
+    amount_correct = []
+    amount_incorrect = []
+    guesses = 7
+    hangman_count = -1
+
+
 
 def guessed_correct():
     if letter in word_progress:
