@@ -37,6 +37,18 @@ def display_game_title():
     print(game_title)
 
 
+def success():
+    display_success = """   
+ __          __  _ _    _____                     _   _   _ 
+ \ \        / / | | |  |  __ \                   | | | | | |
+  \ \  /\  / /__| | |  | |  | | ___  _ __   ___  | | | | | |
+   \ \/  \/ / _ \ | |  | |  | |/ _ \| '_ \ / _ \ | | | | | |
+    \  /\  /  __/ | |  | |__| | (_) | | | |  __/ |_| |_| |_|
+     \/  \/ \___|_|_|  |_____/ \___/|_| |_|\___| (_) (_) (_)
+"""                                                            
+    print(display_success)                                                           
+
+
 def print_hangman_art(hangman_count):
     hangman_image = [
         """
@@ -203,6 +215,7 @@ def run_hangman_game(user_name):
                 if word[i] == guess:
                     word_progress[i] = guess
             if '_' not in word_progress:
+                success()
                 print("Congratulations, you guessed the word correctly!")
                 break
         else:
