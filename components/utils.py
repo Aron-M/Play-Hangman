@@ -2,6 +2,7 @@ import random
 
 
 def display_game_rules():
+    print()
     print("RULES OF THE GAME:")
     print()
     print("1. Guess the letters of the word displayed in blank spaces below.")
@@ -111,6 +112,10 @@ def get_words(filepath='/workspace/Play-Hangman/words.txt'):
 def initialize_game():
     user_name = input("Hello and welcome! Please enter your name: ")
 
+    if not user_name.strip():
+        print("User name cannot be blank. Please enter a valid name.")
+        return
+
     user_choice = ''
     while user_choice == '':
         user_choice = input(f"Hello, {user_name}! "
@@ -147,7 +152,7 @@ def run_hangman_game(user_name):
         print("Guessed Incorrect:", guessed_incorrect)
         print("Tries left:", guesses)
         print("Word progress:", ' '.join(word_progress))
-
+        print()
         guess = input("Enter a letter: ").lower().strip()
 
         if len(guess) != 1:
