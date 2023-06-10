@@ -1,5 +1,6 @@
 import random
 import string
+import os
 
 
 def display_game_rules():
@@ -229,19 +230,24 @@ def run_hangman_game(user_name):
             for i in range(len(word)):
                 if word[i] == guess:
                     word_progress[i] = guess
-                    print("Good guess! Let's go again")
             if '_' not in word_progress:
+                os.system('cls' if os.name == 'nt' else 'clear')
                 print(word)
                 success()
                 print("Congratulations, you guessed the word correctly!")
                 break
+            else:
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("Good guess! Let's go again.")
         else:
             guessed_incorrect.append(guess)
             hangman_count += 1
             guesses -= 1
-            print("Wrong guess! Let's go again.")
+            os.system('cls' if os.name == 'nt' else 'clear')
+            print("Wrong guess! Let's try again.")
 
     if guesses == 0:
+        os.system('cls' if os.name == 'nt' else 'clear')
         game_over()
         print_hangman_art(hangman_count)
         print("Oops! You ran out of tries. The word was:", word)
