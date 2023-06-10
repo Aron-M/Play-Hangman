@@ -113,3 +113,12 @@ Hangman is a fun and interactive game where the user plays a word-guessing game 
   User is displayed with a message saying the game is over | ![](images/features/game-over.png) | Game-Over message is dislayed with some prompts to encourage user to try again and given instructions how to continue or quit
   
 </details>
+
+<details>
+  <summary>User Chooses to Play Again</summary>
+
+  FEATURE | IMAGE | DESCRIPTION
+  :---:|:---:|:---:
+  User is prompted to go again | ![](images/features/go-again.png) | Visuals appear to encourage user to go again. Rules are displayed again followed by in-game display
+  
+</details>
