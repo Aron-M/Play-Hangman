@@ -137,8 +137,20 @@ Hangman is a fun and interactive game where the user plays a word-guessing game 
 
 # TESTING
 
-### Manual testing within terminal
+### Manual Testing Within Terminal
 
 - I have made various attempts to make sure that each feature and function runs according to my workflow charts as depicted above. I made sure to implement manual testing methods after writing each function to see whether the game performs each task as intended. I would write a function, implement it where I would want it to run/display, and then run the app in my terminal to see whether it has achieved the desired outcome. I followed these steps after each individual function and/or feature was implemented.
 
 - I was able to see visual progress during each testing phase. However not always did everything go according to plan. Some amount of bugs were caught, which were then dealt with accordingly as shown below.
+
+
+### Bugs
+
+<details>
+  <summary>Error: Line too long</summary>
+
+  ERROR | IMAGE | DESCRIPTION | SOLUTION
+  :---:|:---:|:---:|:---:
+  Lines were too long in the terminal | [![Error Image](images/bugs/error-line-too-long.png)](images/bugs/error-line-too-long.png) | String lines were all too long, as shown in this example. This was everywhere in my code template. I had to make use of "" to break each of the long lines up into shorter pieces. | [![Solution Image](images/bugs/line-too-long-solution.png)](images/bugs/line-too-long-solution.png)
+  
+</details>
