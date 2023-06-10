@@ -182,7 +182,7 @@ def lost_game_prompt():
     print("Let's give it another go, yeah?")
     time.sleep(1)
     print()
-    print("type 'yes' to go again or 'no' to quit")
+    print("Type 'yes' to go again or 'no' to quit")
     print()
     user_choice = ''
     user_name = ''
@@ -204,8 +204,10 @@ def lost_game_prompt():
 def won_game_prompt():
     time.sleep(2)
     print()
-    print("Sensational stuff!! Your guesswork is impecable."
-          " I would love to see you do it again!")
+    print("Sensational stuff!! Your guesswork is impecable.")
+    time.sleep(1)
+    print()
+    print("I would love to see you do it again!")
     time.sleep(1)
     print()
     print("type 'yes' to go again or 'no' to quit")
