@@ -174,8 +174,30 @@ def get_words(filepath='words.txt'):
 
 
 def lost_game_prompt():
+    time.sleep(2)
+    print()
     print("But that's okay, your time will come!! Give it another go, yeah?")
+    time.sleep(1)
+    print()
     print("type 'yes' to go again or 'no' to quit")
+    print()
+    user_choice = ''
+    user_name = ''
+    while user_choice == '':
+        user_choice = input().lower().strip()
+        display_game_rules()
+        run_hangman_game(user_name)
+
+
+def won_game_prompt():
+    time.sleep(2)
+    print()
+    print("Sensational stuff!! Your guesswork is impecable."
+          " I would love to see you do it again!")
+    time.sleep(1)
+    print()
+    print("type 'yes' to go again or 'no' to quit")
+    print()
     user_choice = ''
     user_name = ''
     while user_choice == '':
@@ -199,22 +221,21 @@ def initialize_game():
 
     user_choice = ''
     while user_choice == '':
-        user_choice = input(f"Hello, {user_name}! "
+        user_choice = input(f"Hello and welcome, {user_name}! "
                             "Do you fancy a game of hangman? "
-                            "Type 'yes' or 'start' to play. "
-                            "If not, type 'exit' "
+                            "Type 'yes' to play,"
                             "or 'no' to quit: ").lower().strip()
 
-        if user_choice in ['yes', 'start']:
+        if user_choice in ['yes']:
             display_game_rules()
             run_hangman_game(user_name)
             user_choice = ''
-        elif user_choice in ['exit', 'no']:
-            print('See you next time!')
+        elif user_choice in ['no']:
+            print(f'See you next time {user_name}!')
             exit()
         else:
-            print('Please type "yes" or "start" to play, '
-                  'or "exit" or "no" to quit.')
+            print('Please type "yes" to play, '
+                  'or "no" to quit.')
             user_choice = ''
 
 
@@ -259,9 +280,10 @@ def run_hangman_game(user_name):
                     word_progress[i] = guess
             if '_' not in word_progress:
                 os.system('cls' if os.name == 'nt' else 'clear')
-                print(word)
+                print(f"The word was: {word}")
                 success()
                 print("Congratulations, you guessed the word correctly!")
+                won_game_prompt()
                 break
             else:
                 os.system('cls' if os.name == 'nt' else 'clear')
