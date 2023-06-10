@@ -57,8 +57,9 @@ Hangman is a fun and interactive game where the user plays a word-guessing game 
 
 ![in-game-logic](images/workflow-charts/in-game-logic.png)
 
+<br>
 
-## FEATURES
+# FEATURES
 ### Click to expand the info for each feature
 <details>
   <summary>Starting the game</summary>
@@ -122,3 +123,22 @@ Hangman is a fun and interactive game where the user plays a word-guessing game 
   User is prompted to go again | ![](images/features/go-again.png) | Visuals appear to encourage user to go again. Rules are displayed again followed by in-game display
   
 </details>
+
+<details>
+  <summary>User Chooses to Quit</summary>
+
+  FEATURE | IMAGE | DESCRIPTION
+  :---:|:---:|:---:
+  User is displayed a goodbye message | ![](images/features/goodbye.png) | Visual ascii art appears to say: "See ya next time". Game exits
+  
+</details>
+
+<br>
+
+# TESTING
+
+### Manual testing within terminal
+
+- I have made various attempts to make sure that each feature and function runs according to my workflow charts as depicted above. I made sure to implement manual testing methods after writing each function to see whether the game performs each task as intended. I would write a function, implement it where I would want it to run/display, and then run the app in my terminal to see whether it has achieved the desired outcome. I followed these steps after each individual function and/or feature was implemented.
+
+- I was able to see visual progress during each testing phase. However not always did everything go according to plan. Some amount of bugs were caught, which were then dealt with accordingly as shown below.
