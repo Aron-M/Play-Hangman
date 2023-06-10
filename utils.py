@@ -229,6 +229,7 @@ def run_hangman_game(user_name):
             for i in range(len(word)):
                 if word[i] == guess:
                     word_progress[i] = guess
+                    print("Good guess! Let's go again")
             if '_' not in word_progress:
                 print(word)
                 success()
