@@ -176,7 +176,10 @@ def get_words(filepath='words.txt'):
 def lost_game_prompt():
     time.sleep(2)
     print()
-    print("But that's okay, your time will come!! Give it another go, yeah?")
+    print("But that's okay, your time will come!!")
+    print()
+    time.sleep(1)
+    print("Let's give it another go, yeah?")
     time.sleep(1)
     print()
     print("type 'yes' to go again or 'no' to quit")
