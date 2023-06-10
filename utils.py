@@ -78,6 +78,20 @@ def game_over():
     print(display_game_over)
 
 
+def lets_go():
+    display_lets_go = """
+    
+  _          _   _        _____                                 _   _   _ 
+ | |        | | ( )      / ____|                               | | | | | |
+ | |     ___| |_|/ ___  | |  __  ___   ___   ___   ___   ___   | | | | | |
+ | |    / _ \ __| / __| | | |_ |/ _ \ / _ \ / _ \ / _ \ / _ \  | | | | | |
+ | |___|  __/ |_  \__ \ | |__| | (_) | (_) | (_) | (_) | (_) | |_| |_| |_|
+ |______\___|\__| |___/  \_____|\___/ \___/ \___/ \___/ \___/  (_) (_) (_)
+                                                                          
+"""
+    print(display_lets_go)
+
+
 def print_hangman_art(hangman_count):
     hangman_image = [
         """
@@ -189,6 +203,7 @@ def lost_game_prompt():
     while user_choice == '':
         user_choice = input().lower().strip()
         if user_choice in ['yes']:
+            lets_go()
             display_game_rules()
             run_hangman_game(user_name)
             user_choice = ''
@@ -217,6 +232,7 @@ def won_game_prompt():
     while user_choice == '':
         user_choice = input().lower().strip()
         if user_choice in ['yes']:
+            lets_go()
             display_game_rules()
             run_hangman_game(user_name)
             user_choice = ''
