@@ -92,25 +92,3 @@ Hangman is a fun and interactive game where the user plays a word-guessing game 
   <!-- Add more features here -->
   
 </details>
-
-<details>
-  <summary>In-Game Progress</summary>
-
-  FEATURE | IMAGE | DESCRIPTION
-  :---:|:---:|:---:
-  User can see how they are faring as they continue to play the game | ![](images/features/in-game-progress.png) | All in-game information is updated according to what letters they guessed correctly and incorrectly. Ascii art displays hanging man inaccordance with amount of wrong guesses
-  
-  <!-- Add more features here -->
-  
-</details>
-
-<details>
-  <summary>User Completes the Word</summary>
-
-  FEATURE | IMAGE | DESCRIPTION
-  :---:|:---:|:---:
-  User is displayed with a congratulatory message | ![](images/features/completed-word.png) | Once the word is completed the user is congratulated and prompted to either play again or otherwise quit the game.
-  
-  <!-- Add more features here -->
-  
-</details>
