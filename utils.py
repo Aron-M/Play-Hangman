@@ -185,8 +185,17 @@ def lost_game_prompt():
     user_name = ''
     while user_choice == '':
         user_choice = input().lower().strip()
-        display_game_rules()
-        run_hangman_game(user_name)
+        if user_choice in ['yes']:
+            display_game_rules()
+            run_hangman_game(user_name)
+            user_choice = ''
+        elif user_choice in ['no']:
+            print(f'See you next time {user_name}!')
+            exit()
+        else:
+            print('Please type "yes" to play, '
+                  'or "no" to quit.')
+            user_choice = ''
 
 
 def won_game_prompt():
@@ -202,8 +211,17 @@ def won_game_prompt():
     user_name = ''
     while user_choice == '':
         user_choice = input().lower().strip()
-        display_game_rules()
-        run_hangman_game(user_name)
+        if user_choice in ['yes']:
+            display_game_rules()
+            run_hangman_game(user_name)
+            user_choice = ''
+        elif user_choice in ['no']:
+            print(f'See you next time {user_name}!')
+            exit()
+        else:
+            print('Please type "yes" to play, '
+                  'or "no" to quit.')
+            user_choice = ''
 
 
 def initialize_game():
