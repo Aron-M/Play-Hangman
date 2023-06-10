@@ -1,18 +1,31 @@
 import random
 import string
 import os
+import time
 
 
 def display_game_rules():
     print()
     print("RULES OF THE GAME:")
+    time.sleep(1)
     print()
+    time.sleep(1)
     print("1. Guess the letters of the word displayed in blank spaces below.")
-    print("2. Only guess lower-case alphabetical letters.")
-    print("3. Numbers, spaces, punctuations, blank guesses are not allowed.")
-    print("4. You have 7 guesses to complete the word.")
+    time.sleep(1)
     print()
+    print("2. Only guess alphabetical letters.")
+    time.sleep(1)
+    print()
+    print("3. Numbers, spaces, punctuation, and blank guesses are not allowed.")
+    time.sleep(1)
+    print()
+    print("4. You have 7 guesses to complete the word.")
+    time.sleep(1)
+    print()
+    time.sleep(1)
     print("Good luck!")
+    print()
+    time.sleep(1)
 
 
 def display_game_title():
