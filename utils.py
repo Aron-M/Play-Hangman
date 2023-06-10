@@ -160,6 +160,17 @@ def get_words(filepath='words.txt'):
         return result
 
 
+def lost_game_prompt():
+    print("But that's okay, your time will come!! Give it another go, yeah?")
+    print("type 'yes' to go again or 'no' to quit")
+    user_choice = ''
+    user_name = ''
+    while user_choice == '':
+        user_choice = input().lower().strip()
+        display_game_rules()
+        run_hangman_game(user_name)
+
+
 def initialize_game():
     display_game_title()
     user_name = input("Hello and welcome! Please enter your name: ")
@@ -213,15 +224,18 @@ def run_hangman_game(user_name):
         guess = input("Enter a letter: ").lower().strip()
 
         if len(guess) != 1:
+            os.system('cls' if os.name == 'nt' else 'clear')
             print("Please enter only one letter."
                   "Spaces and blank attempts not allowed")
             continue
 
         if not guess.isalpha():
+            os.system('cls' if os.name == 'nt' else 'clear')
             print("Please enter only alphabetical characters.")
             continue
 
         if guess in guessed_correct or guess in guessed_incorrect:
+            os.system('cls' if os.name == 'nt' else 'clear')
             print("You have already guessed that letter. Try another letter.")
             continue
 
@@ -250,4 +264,5 @@ def run_hangman_game(user_name):
         os.system('cls' if os.name == 'nt' else 'clear')
         game_over()
         print_hangman_art(hangman_count)
-        print("Oops! You ran out of tries. The word was:", word)
+        print(f"Oops! You ran out of tries {user_name}. The word was:", word)
+        lost_game_prompt()
