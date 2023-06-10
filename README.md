@@ -59,15 +59,13 @@ Hangman is a fun and interactive game where the user plays a word-guessing game 
 
 
 ## FEATURES
-#### Click to expand the info for each feature
+### Click to expand the info for each feature
 <details>
   <summary>Starting the game</summary>
 
   FEATURE | IMAGE | DESCRIPTION
   :---:|:---:|:---:
   Prompt to initialize game | ![](images/features/initialize-game.png) | User gets greeted and asked to start game
-  
-  <!-- Add more features here -->
   
 </details>
 
@@ -78,8 +76,6 @@ Hangman is a fun and interactive game where the user plays a word-guessing game 
   :---:|:---:|:---:
   Rules are displayed one by one to the user before the first play can be made | ![](images/features/game-rules.png) | User can examine the rules of the game before starting to play
   
-  <!-- Add more features here -->
-  
 </details>
 
 <details>
@@ -88,8 +84,6 @@ Hangman is a fun and interactive game where the user plays a word-guessing game 
   FEATURE | IMAGE | DESCRIPTION
   :---:|:---:|:---:
   User can see the depiction of the gallows followed by in-game information | ![](images/features/in-game-display.png) | User can see additional information such as the amount of letters needed to be guessed, the amount of tries available, letters guessed correctly and incorrectly
-  
-  <!-- Add more features here -->
   
 </details>
 
@@ -100,8 +94,6 @@ Hangman is a fun and interactive game where the user plays a word-guessing game 
   :---:|:---:|:---:
   User can see how they are faring as they continue to play the game | ![](images/features/in-game-progress.png) | All in-game information is updated according to what letters they guessed correctly and incorrectly. Ascii art displays hanging man inaccordance with amount of wrong guesses
   
-  <!-- Add more features here -->
-  
 </details>
 
 <details>
@@ -111,6 +103,13 @@ Hangman is a fun and interactive game where the user plays a word-guessing game 
   :---:|:---:|:---:
   User is displayed with a congratulatory message | ![](images/features/completed-word.png) | Once the word is completed the user is congratulated and prompted to either play again or otherwise quit the game.
   
-  <!-- Add more features here -->
+</details>
+
+<details>
+  <summary>User Loses/ Runs out of Guesses</summary>
+
+  FEATURE | IMAGE | DESCRIPTION
+  :---:|:---:|:---:
+  User is displayed with a message saying the game is over | ![](images/features/game-over.png) | Game-Over message is dislayed with some prompts to encourage user to try again and given instructions how to continue or quit
   
 </details>
