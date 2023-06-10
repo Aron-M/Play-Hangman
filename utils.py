@@ -154,7 +154,7 @@ def run_hangman_game(user_name):
             os.system('cls' if os.name == 'nt' else 'clear')
             print("Please enter only one letter."
                   "Spaces, multiple letters" 
-                  "and blank attempts not allowed")
+                  " and blank attempts not allowed")
             continue
 
         if not guess.isalpha():
