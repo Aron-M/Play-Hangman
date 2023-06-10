@@ -3,6 +3,8 @@ import string
 import os
 import time
 
+from hangman_ascii_art import display_game_title, success, game_over, lets_go, print_hangman_art, goodbye
+
 
 def display_game_rules():
     print()
@@ -26,155 +28,6 @@ def display_game_rules():
     print("Good luck!")
     print()
     time.sleep(1)
-
-
-def display_game_title():
-    game_title = """
-
-
-  _____ _   _        _    _                                         
- |_   _| | ( )      | |  | |                                        
-   | | | |_|/ ___   | |__| | __ _ _ __   __ _ _ __ ___   __ _ _ __  
-   | | | __| / __|  |  __  |/ _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
-  _| |_| |_  \__ \  | |  | | (_| | | | | (_| | | | | | | (_| | | | |
- |_____|\__| |___/  |_|  |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
-                                         __/ |                      
-                                        |___/                       
-                
-                      _______ _                  _ 
-                     |__   __(_)                | |
-                        | |   _ _ __ ___   ___  | |
-                        | |  | | '_ ` _ \ / _ \ | |
-                        | |  | | | | | | |  __/ |_|
-                        |_|  |_|_| |_| |_|\___| (_)
-    """
-    print(game_title)
-
-
-def success():
-    display_success = """   
- __          __  _ _    _____                     _   _   _ 
- \ \        / / | | |  |  __ \                   | | | | | |
-  \ \  /\  / /__| | |  | |  | | ___  _ __   ___  | | | | | |
-   \ \/  \/ / _ \ | |  | |  | |/ _ \| '_ \ / _ \ | | | | | |
-    \  /\  /  __/ | |  | |__| | (_) | | | |  __/ |_| |_| |_|
-     \/  \/ \___|_|_|  |_____/ \___/|_| |_|\___| (_) (_) (_)
-"""                                                            
-    print(display_success)                                                           
-
-
-def game_over():
-    display_game_over = """
-    
- __          _____                          ____                         __
- \ \   _    / ____|                        / __ \                   _   / /
-  | | (_)  | |  __  __ _ _ __ ___   ___   | |  | |_   _____ _ __   (_) | | 
-  | |      | | |_ |/ _` | '_ ` _ \ / _ \  | |  | \ \ / / _ \ '__|      | | 
-  | |  _   | |__| | (_| | | | | | |  __/  | |__| |\ V /  __/ |      _  | | 
-  | | (_)   \_____|\__,_|_| |_| |_|\___|   \____/  \_/ \___|_|     (_) | | 
- /_/                                                                    \_\
-                                                                           
-"""
-    print(display_game_over)
-
-
-def lets_go():
-    display_lets_go = """
-    
-  _          _   _        _____                                 _   _   _ 
- | |        | | ( )      / ____|                               | | | | | |
- | |     ___| |_|/ ___  | |  __  ___   ___   ___   ___   ___   | | | | | |
- | |    / _ \ __| / __| | | |_ |/ _ \ / _ \ / _ \ / _ \ / _ \  | | | | | |
- | |___|  __/ |_  \__ \ | |__| | (_) | (_) | (_) | (_) | (_) | |_| |_| |_|
- |______\___|\__| |___/  \_____|\___/ \___/ \___/ \___/ \___/  (_) (_) (_)
-                                                                          
-"""
-    print(display_lets_go)
-
-
-def print_hangman_art(hangman_count):
-    hangman_image = [
-        """
-        +---+
-            |
-            |
-            |
-            |
-            |
-         ======
-        """,
-        """
-        +---+
-          | |
-          O |
-            |
-            |
-            |
-         ======
-        """, 
-
-        """
-        +---+
-          | |
-          O |
-         /  |
-            |
-            |
-         ======
-        """, 
-
-        """
-        +---+
-          | |
-          O |
-         /| |
-            |
-            |
-         ======
-        """, 
-
-        """
-        +---+
-          | |
-          O |
-         /|\|
-            |
-            | 
-         ======
-        """, 
-
-        """
-        +---+
-          | |
-          O |
-         /|\|
-          | | 
-            | 
-         ======
-        """, 
-
-        """
-        +---+
-          | |
-          O |
-         /|\|
-          | | 
-         /  | 
-         ======
-        """, 
-
-        """
-        +---+
-          | |
-          O |
-         /|\|
-          | | 
-         / \| 
-         ======
-        """
-    ]
-
-    print(hangman_image[hangman_count])
 
 
 def get_words(filepath='words.txt'):
@@ -208,7 +61,7 @@ def lost_game_prompt():
             run_hangman_game(user_name)
             user_choice = ''
         elif user_choice in ['no']:
-            print(f'See you next time {user_name}!')
+            goodbye()
             exit()
         else:
             print('Please type "yes" to play, '
@@ -238,6 +91,7 @@ def won_game_prompt():
             user_choice = ''
         elif user_choice in ['no']:
             print(f'See you next time {user_name}!')
+            goodbye()
             exit()
         else:
             print('Please type "yes" to play, '
@@ -299,7 +153,8 @@ def run_hangman_game(user_name):
         if len(guess) != 1:
             os.system('cls' if os.name == 'nt' else 'clear')
             print("Please enter only one letter."
-                  "Spaces and blank attempts not allowed")
+                  "Spaces, multiple letters" 
+                  "and blank attempts not allowed")
             continue
 
         if not guess.isalpha():
