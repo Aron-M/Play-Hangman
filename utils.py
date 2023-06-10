@@ -49,6 +49,21 @@ def success():
     print(display_success)                                                           
 
 
+def game_over():
+    display_game_over = """
+    
+ __          _____                          ____                         __
+ \ \   _    / ____|                        / __ \                   _   / /
+  | | (_)  | |  __  __ _ _ __ ___   ___   | |  | |_   _____ _ __   (_) | | 
+  | |      | | |_ |/ _` | '_ ` _ \ / _ \  | |  | \ \ / / _ \ '__|      | | 
+  | |  _   | |__| | (_| | | | | | |  __/  | |__| |\ V /  __/ |      _  | | 
+  | | (_)   \_____|\__,_|_| |_| |_|\___|   \____/  \_/ \___|_|     (_) | | 
+ /_/                                                                    \_\
+                                                                           
+"""
+    print(display_game_over)
+
+
 def print_hangman_art(hangman_count):
     hangman_image = [
         """
@@ -215,6 +230,7 @@ def run_hangman_game(user_name):
                 if word[i] == guess:
                     word_progress[i] = guess
             if '_' not in word_progress:
+                print(word)
                 success()
                 print("Congratulations, you guessed the word correctly!")
                 break
@@ -225,5 +241,6 @@ def run_hangman_game(user_name):
             print("Wrong guess! Let's go again.")
 
     if guesses == 0:
+        game_over()
         print_hangman_art(hangman_count)
         print("Oops! You ran out of tries. The word was:", word)
