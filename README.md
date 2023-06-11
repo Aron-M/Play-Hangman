@@ -316,4 +316,37 @@ I used Code Institute's PEP 8 Linter to check for errors in my code templates, a
     </details>
     <br>
 
-4. Very good! Now you should have your own local repository with all the neccessary code templates to run the game. In the terminal you can type "python3 run.py" to test the game within your local terminal.
+4. Very good! Now you should have your own local repository with all the neccessary code templates to run the game. In the terminal you can type "python3 run.py" to test the game within your local terminal. Next up we have to deploy it on Heroku.
+
+## Deployment on Heroku
+
+5. Go to [Heroku](https://id.heroku.com/login) and login to your account.
+
+6. At the top right corner click the **New** button and then **Create new app**, next you will
+- Name your app whatever you like, then 
+- Pick server depending which region you are in: For me it was Europe 
+- Then click **Create app**
+    <details><summary>Picture</summary>
+    <img src="images/deployment/heroku-1.png" alt="heroku"/>
+    <img src="images/deployment/heroku-2.png" alt="heroku"/>
+    </details>
+    <br>
+
+7. Go to **Settings** and press **Reveal Config Vars**. In the **KEY** block type in **PORT** and for **VALUE** type in **8000**.
+    <details><summary>Picture</summary>
+    <img src="images/deployment/heroku-3.png" alt="heroku"/>
+    </details>
+    <br>
+
+8. Now scroll down until you see **Buildpacks**, press **Add buildpack** and select **python** and **save change**. Afterwards, again **Add buildpack** but this time pick **nodejs** and **save change**. heroku/python should be above nodejs. If its not, then drag it with the hamburger menu on the left of the image or remove with x and add again in the correct order.
+    <details><summary>Picture</summary>
+    <img src="images/deployment/heroku-4.png" alt="heroku"/>
+    </details>
+    <br>
+
+9. Go back to top of the page and click **Deploy**, and click on **GitHub** and connect to it. Next below type in name of your repo and press search, it should automaticaly find the repo.
+    <details><summary>Picture</summary>
+    <img src="" alt="heroku"/>
+    <img src="" alt="heroku"/>
+    </details>
+    <br>
