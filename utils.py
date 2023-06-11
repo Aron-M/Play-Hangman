@@ -3,7 +3,8 @@ import string
 import os
 import time
 
-from hangman_ascii_art import display_game_title, success, game_over, lets_go, print_hangman_art, goodbye
+from hangman_ascii_art import display_game_title, success, game_over, lets_go
+from hangman_ascii_art import print_hangman_art, goodbye
 
 
 def display_game_rules():
@@ -18,7 +19,7 @@ def display_game_rules():
     print("2. Only guess alphabetical letters.")
     time.sleep(1)
     print()
-    print("3. Numbers, spaces, punctuation, and blank guesses are not allowed.")
+    print("3. Numbers, spaces, punctuation & blank guesses are not allowed.")
     time.sleep(1)
     print()
     print("4. You have 7 guesses to complete the word.")
@@ -32,8 +33,8 @@ def display_game_rules():
 
 def get_words(filepath='words.txt'):
     result = []
-    with open(filepath) as n:
-        lines = n.readlines()
+    with open(filepath) as i:
+        lines = i.readlines()
         for line in lines:
             word = str(line).lower().strip()
             result.append(word)
@@ -153,7 +154,7 @@ def run_hangman_game(user_name):
         if len(guess) != 1:
             os.system('cls' if os.name == 'nt' else 'clear')
             print("Please enter only one letter."
-                  "Spaces, multiple letters" 
+                  "Spaces, multiple letters"
                   " and blank attempts not allowed")
             continue
 

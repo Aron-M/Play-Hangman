@@ -163,3 +163,21 @@ Hangman is a fun and interactive game where the user plays a word-guessing game 
   At the start of the game, the final image of the hangman art was displaying instead of the first | [![Error Image](images/bugs/error-showing-final-art-not-first.png)](images/bugs/error-showing-final-art-not-first.png) | The wrong image was called at the start of the game and I had to ammend code to call the first image showing the gallows. Code ammended was adding an array within the function calling for the images from the start. "print(hangman_image[hangman_count])" | [![Solution Image](images/features/in-game-display.png)](images/features/in-game-display.png)
   
 </details>
+
+<details>
+  <summary>Error: Past rounds filling up space in the terminal</summary>
+
+  ERROR | IMAGE | DESCRIPTION | SOLUTION
+  :---:|:---:|:---:|:---:
+  Each attempt stays in displayed instead of being erased | [![Error Image](images/bugs/error-handling-displays-past-attempts.png)](images/bugs/error-handling-displays-past-attempts.png) | I wanted to clear the terminal of past attempts to have everything look cleaner, as the game is set up aleady to display the users current game state on each new try. There was no need for showing the history of guesses in the terminal, so I imported os and ran"os.system('cls' if os.name == 'nt' else 'clear')" within various functions to clear the terminal after guesses and showing the most current game state.| [![Solution Image](images/features/in-game-progress.png)](images/features/in-game-progress.png)
+  
+</details>
+
+<details>
+  <summary>Error: User was able to guess with numbers</summary>
+
+  ERROR | IMAGE | DESCRIPTION | SOLUTION
+  :---:|:---:|:---:|:---:
+  Numbers were being passed as valid inputs | [![Error Image](images/bugs/error-can-restart-game-with-number-input.png)](images/bugs/error-can-restart-game-with-number-input.png) | The user should not be allowed to use numbers, spaces or punctuation as inputs. I had to write some error-handling code to prevent such inputs from happening| [![Solution Image](images/bugs/erro-handling.png)](images/bugs/erro-handling.png)
+  
+</details>
