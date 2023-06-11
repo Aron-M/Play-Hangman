@@ -229,6 +229,12 @@ Hangman is a fun and interactive game where the user plays a word-guessing game 
 
 <br>
 
+## Caught Error (Unfixed)
+
+ERROR | GITPOD | DESCRIPTION | HEROKU
+  :---:|:---:|:---:|:---:
+  Terminal does not fully clear within Heroku terminal, but clears fine within local Gitpod terminal when user makes new guess attempt | [![Error Image](images/features/in-game-progress.png)](images/features/in-game-progress.png) | As you can see on the left, the terminal is clear with only the in-game-progress information displayed each time when the user makes a guess. That is the intended state. However on the right you can see that within the Heroku terminal, only some of the information is deleted and the first rule and welcome messages still displayes. I can not figure out how to have everything cleared within the Heroku terminal the same way as it is wihin the Gitpod terminal| [![Error Image](images/bugs/caught-exception.png)](images/bugs/caught-exception.png)
+
 ## PEP 8 Linting
 
 I used Code Institute's PEP 8 Linter to check for errors in my code templates, as can be seen below:
