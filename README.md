@@ -151,6 +151,15 @@ Hangman is a fun and interactive game where the user plays a word-guessing game 
 
   ERROR | IMAGE | DESCRIPTION | SOLUTION
   :---:|:---:|:---:|:---:
-  Lines were too long in the terminal | [![Error Image](images/bugs/error-line-too-long.png)](images/bugs/error-line-too-long.png) | String lines were all too long, as shown in this example. This was everywhere in my code template. I had to make use of "" to break each of the long lines up into shorter pieces. | [![Solution Image](images/bugs/line-too-long-solution.png)](images/bugs/line-too-long-solution.png)
+  Lines were too long in the terminal | [![Error Image](images/bugs/error-line-too-long.png)](images/bugs/error-line-too-long.png) | String lines were all too long in the terminal. This was everywhere in my code template. I had to break each line into shorter pieces using quotation marks. | [![Solution Image](images/bugs/line-too-long-solution.png)](images/bugs/line-too-long-solution.png)
+  
+</details>
+
+<details>
+  <summary>Error: Wrong Ascii image displayed at start</summary>
+
+  ERROR | IMAGE | DESCRIPTION | SOLUTION
+  :---:|:---:|:---:|:---:
+  At the start of the game, the final image of the hangman art was displaying instead of the first | [![Error Image](images/bugs/error-showing-final-art-not-first.png)](images/bugs/error-showing-final-art-not-first.png) | The wrong image was called at the start of the game and I had to ammend code to call the first image showing the gallows. Code ammended was adding an array within the function calling for the images from the start. "print(hangman_image[hangman_count])" | [![Solution Image](images/features/in-game-display.png)](images/features/in-game-display.png)
   
 </details>
