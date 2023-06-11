@@ -115,7 +115,7 @@ def initialize_game():
 
     user_choice = ''
     while user_choice == '':
-        user_choice = input(f"Hello and welcome, {user_name}! "
+        user_choice = input(f"Hi there, {user_name}! "
                             "Do you fancy a game of hangman? "
                             "Type 'yes' to play,"
                             "or 'no' to quit: ").lower().strip()

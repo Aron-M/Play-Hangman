@@ -229,3 +229,73 @@ I used Code Institute's PEP 8 Linter to check for errors in my code templates, a
     <img src="images/PEP8/PEP8-ascii-art.png" alt="multiple errors">
     </details>
 <br>
+
+## Testing User Stories
+### Click to expand the info for each User Story
+<details>
+  <summary>User Story 1</summary>
+
+  USER STORY | IMAGE | STATUS
+  :---:|:---:|:---:
+  As user engaging with the application I want to be able to participate in a word game. | ![](images/features/initialize-game.png) | Complete
+  
+</details>
+
+<details>
+  <summary>User Story 2</summary>
+
+  USER STORY | IMAGE | STATUS
+  :---:|:---:|:---:
+  As user playing the game I want the instructions to be clear. | ![](images/features/game-rules.png) | Complete
+  
+</details>
+
+<details>
+  <summary>User Story 3</summary>
+
+  USER STORY | IMAGE | STATUS
+  :---:|:---:|:---:
+  As user I want to interact easily with the application. | ![](images/features/interaction.png) | Complete
+  
+</details>
+
+<details>
+  <summary>User Story 4</summary>
+
+  USER STORY | IMAGE | STATUS
+  :---:|:---:|:---:
+  As user I want to see my progress on a visual level. | ![](images/features/in-game-progress.png) | Complete
+  
+</details>
+
+<details>
+  <summary>User Story 5</summary>
+
+  USER STORY | IMAGE | STATUS
+  :---:|:---:|:---:
+  As a user I want to be informed when my actions/decisions were right or wrong. | ![](images/features/wrong-guess.png) | Complete
+  
+</details>
+
+<details>
+  <summary>User Story 6</summary>
+
+  USER STORY | IMAGE | STATUS
+  :---:|:---:|:---:
+  As user I want be able to play again or exit once the game is over. | ![](images/features/try-again.png) | Complete
+  
+</details>
+
+<br>
+
+# Deployment
+
+- This application was created locally and deployed with Heroku afterwrds, and not making use of any external libraries or API's. The only datasheet used is a 'words.txt' file stored locally.
+
+- Make use of the following steps for manual deployment:
+
+1. Go to [GitHub](https://github.com/) and login if you arent yet, then go to [this link](https://github.com/Aron-M/Play-Hangman). It will open my repository, then press **< CODE >** and press **Local** then press Copy to clipboard button.
+    <details><summary>Picture</summary>
+    <img src="images/deployment/hangman-github-repo.png" alt="github"/>
+    </details>
+    <br>
