@@ -299,3 +299,21 @@ I used Code Institute's PEP 8 Linter to check for errors in my code templates, a
     <img src="images/deployment/hangman-github-repo.png" alt="github"/>
     </details>
     <br>
+
+2. Go to your github repositories and create your own new repo. You can call it whatever you like. Press **Create Repository** and it will lead you to a new page. Press **Gitpod**  and it should open a new workspace for you. 
+ ***If you are using VSCODE, then just open a new workspace***
+    <details><summary>Picture</summary>
+    <img src="images/deployment/deploy-repo-1.png" alt="github"/>
+    <img src="images/deployment/deploy-repo-2.png" alt="github"/>
+    <img src="images/deployment/deploy-repo-3.png" alt="github"/>
+    </details>
+    <br>
+
+3. When Gitpod or VSCODE is open, type in 'git bash' following "**git clone https://github.com/Aron-M/Play-Hangman.git**" without using any quotation marks, and press enter. It will clone my repository.
+    <details><summary>Picture</summary>
+    <img src="images/deployment/deploy-git-clone-1.png" alt="github"/>
+    <img src="images/deployment/deploy-git-clone-2.png" alt="github"/>
+    </details>
+    <br>
+
+4. Very good! Now you should have your own local repository with all the neccessary code templates to run the game. In the terminal you can type "python3 run.py" to test the game within your local terminal.
