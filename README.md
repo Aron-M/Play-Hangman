@@ -59,6 +59,30 @@ Hangman is a fun and interactive game where the user plays a word-guessing game 
 
 <br>
 
+# Technology, Frameworks and Programs used.
+
+## Languages
+
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+## Dependencies and Frameworks
+
+- [Time Library](https://docs.python.org/3/library/time.html)
+    - Used to time code execution.
+
+- [Random Library](https://docs.python.org/3/library/random.html)
+    - Used to randomize words if API is down giving status code 503.
+
+- [OS](https://docs.python.org/3/library/os.html)
+    - Used to clear terminal before new word is being displayed.
+
+- [Patorjk.com](https://patorjk.com/software/taag/#p=display&f=Big&t=)
+    - Used to make ASCII art
+
+- [PEP8 Code Institute](https://pep8ci.herokuapp.com/#)
+    - Used to linter Python code and see if any mistakes or issues came up.
+
+
 # FEATURES
 ### Click to expand the info for each feature
 <details>
@@ -137,15 +161,15 @@ Hangman is a fun and interactive game where the user plays a word-guessing game 
 
 # TESTING
 
-### Manual Testing Within Terminal
+## Manual Testing Within Terminal
 
 - I have made various attempts to make sure that each feature and function runs according to my workflow charts as depicted above. I made sure to implement manual testing methods after writing each function to see whether the game performs each task as intended. I would write a function, implement it where I would want it to run/display, and then run the app in my terminal to see whether it has achieved the desired outcome. I followed these steps after each individual function and/or feature was implemented.
 
 - I was able to see visual progress during each testing phase. However not always did everything go according to plan. Some amount of bugs were caught, which were then dealt with accordingly as shown below.
 
 
-### Bugs
-
+## Bugs
+### Click to expand the info for each bug
 <details>
   <summary>Error: Line too long</summary>
 
@@ -181,3 +205,27 @@ Hangman is a fun and interactive game where the user plays a word-guessing game 
   Numbers were being passed as valid inputs | [![Error Image](images/bugs/error-can-restart-game-with-number-input.png)](images/bugs/error-can-restart-game-with-number-input.png) | The user should not be allowed to use numbers, spaces or punctuation as inputs. I had to write some error-handling code to prevent such inputs from happening| [![Solution Image](images/bugs/erro-handling.png)](images/bugs/erro-handling.png)
   
 </details>
+
+<br>
+
+## PEP 8 Linting
+
+I used Code Institute's PEP 8 Linter to check for errors in my code templates, as can be seen below:
+
+- run.py ran through pep8 linter and found no errors
+    <details><summary>run.py</summary>
+    <img src="images/PEP8/PEP8-runpy.png" alt="no errors">
+    </details>
+<br>
+
+- utils.py ran through pep8 linter and found no errors
+    <details><summary>utils.py</summary>
+    <img src="images/PEP8/PEP8-utils.png" alt="no errors">
+    </details>
+<br>
+
+- hangman_ascii_art.py ran through pep8 linter and found multiple errors. These errors were tolerated as they were all only warnings regarding indentations and spacings around the ascii art used
+    <details><summary>hangman_ascii_art.py</summary>
+    <img src="images/PEP8/PEP8-ascii-art.png" alt="multiple errors">
+    </details>
+<br>
